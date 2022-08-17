@@ -1,0 +1,101 @@
+:root {
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%); /* Title called Advice and dice's bg color */
+    --Grayish-Blue: hsl(217, 19%, 38%); 
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%); /* card bg */
+    --Dark-Blue: hsl(218, 23%, 16%); /* bg */
+}
+
+body {
+    background-color: var(--Dark-Blue);
+    display: grid;
+    place-content: center;
+    height: 500px;
+}
+
+.content {
+    margin-top: 50px;
+}
+
+.card {
+    background-color: var(--Dark-Grayish-Blue);
+    width: 550px;
+    height: auto;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 250px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#title {
+    color: var(--Neon-Green);
+    font-family: 'Manrope', sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+}
+
+#advice {
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    padding-inline: 50px;
+    margin-bottom: 40px;
+    margin-top: 25px;
+}
+
+.underlines {
+    margin-bottom: 55px;
+}
+
+.dice-container {
+    background-color: var(--Neon-Green);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    margin-inline: auto;
+    margin-top: -30px;
+    cursor: pointer;
+}
+
+.dice-container:active {
+    box-shadow: 2px 2px 50px 2px var(--Neon-Green);
+}
+
+.dice {
+    padding: 18px;
+}
+
+.mobile-divider {
+    display: none;
+}
+
+@media screen and (max-width:480px) {
+    .mobile-divider {
+        display: block;
+        margin-inline: auto;
+    }
+
+    .desktop-divider {
+        display: none;
+    }
+
+    .card {
+        width: 330px;
+        margin-top: 180px;
+    }
+
+    #title {
+        font-size: 10px;
+    }
+
+    #advice {
+        font-size: 24px;
+        padding-inline: 30px;
+    }
+}
