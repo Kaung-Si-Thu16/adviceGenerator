@@ -75,6 +75,22 @@ body {
     display: none;
 }
 
+.animation {
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @media screen and (max-width:480px) {
     .mobile-divider {
         display: block;
@@ -87,7 +103,7 @@ body {
 
     .card {
         width: 330px;
-        margin-top: 180px;
+        margin-top: 130px;
     }
 
     #title {
